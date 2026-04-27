@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: white;
+  background-image:url(assets/salaar.jpg);
+  max-width: max-content;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #6a5acd, #00c9a7);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+/* Cards */
+.Card {
+    padding: 20px;
+    background: beige;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0, 5, 20px solid beige;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.hex { background: #e74c3c; }
+.rgb { background: #2ecc71; }
+.hsl { background: #3498db; }
+.rgba { background: #555; }
+
+/* gradient */
+
+.gradient-box {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    text-align: center;
+    color: white;
+    padding: 40px;
+    margin-top: 10px    ;
+}
+
+/* Border{s */
+
+.borders {
+    display: flex;
+    gap: 10px;
+
+}
+.borders div{
+    padding: 10px;
+}
+
+.dashed {
+    border: 3px dashed blue;
+}
+.dotted {
+    border: 3px dotted blue;
+}
+.double {
+    border: 6px double blue;
+}
+.rounded {
+  border: 3px solid #3498db;
+  border-radius: 10px;
+}
+
+.pill {
+  background: #3498db;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+/* shadow */
+.shadow-card {
+  transition: 0.3s;
+}
+
+.shadow-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn {
+  margin-top: 10px;
+  background: #6c5ce7;
+}
+/* Typography */
+.dropcap::first-letter {
+    font-size: 40px;
+    font-weight: bold;
+    color:#6c5ce7 ;
+}
+.smallcaps {
+    font-variant:small-caps;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+/* tables */
+table {
+    border-collapse:collapse ;
+    width: 100%;
+}
+table th, td {
+    padding: 10px;
+    border: 2px solid #ddd;
+}
+table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+/* Overflow */
+.overflow-box {
+  height: 100px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 6px;
+}

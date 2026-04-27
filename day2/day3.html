@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering CSS Styling</title>
+    <link rel="stylesheet" href="day3.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Mastering CSS Styling</h1>
+            <p>A Comprehensive Visual Reference Guide</p>
+        </header>
+
+        <br>
+
+        <!-- 1.Color -->
+
+        <section class="Card">
+            <h2>1.Color Systems</h2>
+            
+            <p>Colors can be defined using names,HEX codes,RGB & HSL Values</p>
+            <br>
+            <div class="buttons">
+                <button class="hex">HEX (#e74c3c)</button>
+                <button class="rgb">RGB (46, 204, 113)</button>
+                <button class="hsl">HSL (200, 100%, 50%)</button>
+                <button class="rgba">RGBA (Transperancy)</button>
+            </div>
+           
+        </section>
+
+        <!-- 2.Gradient -->
+
+        <section class="Card">
+            <h2>2.Backgrounds & Gradients</h2>
+            <hr><br>
+            <div class="gradient-box">Linear Gradient Background</div>
+            <br>
+            <p>Using linear-gradient(45deg, #ff6b6b, #feca57) for modern UI looks</p>
+        </section>
+        <br>
+
+        <!-- 3.Borders -->
+
+        <section class="Card">
+            <h2>3.Borders & Shapes</h2>
+            <br>
+            <hr>
+            <div class="borders">
+                <div class="dashed">Dashed Border</div>
+                <div class="dotted">Dotted Border</div>
+                <div class="double">Double Border</div>
+                <div class="rounded">Rounded Corners</div>
+                <div class="pill">0</div>
+            </div>
+        </section>
+
+        <!-- 4.Shadows -->
+
+        <section class="Card shadow-card">
+            <h2>4.Shadows & Hover Effects</h2>
+            <hr><br>
+            <p>Box Shadow Card</p>
+            <hr><br>
+            <p>Hover over this card to see the shadow transistion and lift effect</p>
+            <button class="btn">Interactive Button</button>
+        </section>
+
+        <!-- 5. Typography -->
+
+        <section class="card">
+            <h2>5. Text & Typography</h2>
+            <hr><br>
+            <p class="dropcap">
+                This paragraph uses the ::first-letter pseudo-element to create a "Drop Cap" effect.
+            </p>
+            <p class="smallcaps">
+                This text uses small-caps, spacing, and capitalization properties.
+            </p>
+        </section>
+
+        <!-- 6.Lists&Tables -->
+
+        <div class="Card">
+            <h2>6.Lists & Tables</h2>
+            <hr><br>
+            <ul>
+                <li>Square Bullet Point 1</li>
+                <li>Square Bullet Point 2</li>
+                <li>Square Bullet Point 3</li>
+            </ul>
+
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>border-collapse</td>
+                    <td>Combines table borders into one</td>
+                </tr>
+                <tr>
+                    <td>nth-child</td>
+                    <td>Styles specific rows (like zebra stripes)</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 7.Overflow -->
+
+        <div class="Card">
+            <h2>7.Overflow Control</h2>
+            <hr><br>
+            <div class="overflow-box">
+                <p>This is a scrollable container. Inside here is a lot of content that exceeds the 100px height limit
+                    set on the parent.</p>
+                <p>Because overflow: auto is used, the browser provides a scrollbar only when necessary.</p>
+                <p>Line 2 of content...</p>
+                <p>Line 3 of content...</p>
+                <p>Line 4 of content...</p>
+                <p>Line 5 of content...</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
