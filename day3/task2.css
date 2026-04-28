@@ -1,0 +1,82 @@
+body {
+    color: white;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+}
+.logo {
+    color: blueviolet;
+    font-size: 30px;
+    font-weight: bold;
+}
+.navbar nav a.home {
+    color: orange;
+}
+.navbar nav a {
+    margin-left: 30px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #555;
+}
+/* main section */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 80 px;
+}
+
+/* left section */
+
+.content {
+    max-width: 500px;
+}
+.content h1 {
+    color: blueviolet;
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+/* progress bars */
+
+.progress-box {
+    margin-bottom: 25px;
+}
+.label {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    font-size: 14px;
+    color: gray;
+}
+.progress {
+    width: 100%;
+    overflow: hidden;
+    height: 6px;
+    border-radius: 5px;
+    background: white;
+}
+.bar {
+    height: 100%;
+    border-radius: 5px;
+}
+/* colors */
+
+.blue { background: blue;}
+.darkblue { background: darkblue; }
+.orange { background: orange;}
+.lightblue { background: lightblue;}
+
+/* right image  */
+
+.image img {
+    width: 350px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    
+}
+

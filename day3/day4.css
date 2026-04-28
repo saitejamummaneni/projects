@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(7, 10, 110);
+    text-align: center;
+    justify-content: center;
+}
+
+.card {
+    background: beige;
+    width: 300px;
+    border-radius: 50px;
+    padding: 70px;
+    text-align: center;
+    box-shadow: 0, 10px, 20px rgba(red, green, blue, alpha);
+}
+
+.salaar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.salaar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #7b61ff;
+
+
+}
+
+.role {
+    color: black;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.stats {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.stats h3 {
+    margin: 0;
+    color: black;
+}
+
+.stats p {
+    color: gray;
+    font-size: 15px;
+    margin: 0 0 20px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #6a5acd, #a64bf4);
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
