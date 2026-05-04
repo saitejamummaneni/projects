@@ -1,0 +1,205 @@
+body {
+    /* margin: 0; */
+    font-family: 'Playfair Display', serif;
+}
+
+/* section 1 */
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    font-size: 17px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.logo {
+    height: 50px;
+    margin: 20px;
+    margin-left: 20px;
+    z-index: 2;
+    filter: brightness(0) invert(1);
+}
+
+nav a {
+    margin: 0 20px;
+    z-index: 2;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    padding: 40px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+
+}
+
+/* ICONS */
+.icons{
+    display: flex;
+    margin-right: 20px;
+}
+.icons i {
+    margin: 20px;
+    font-size: 18px;
+    z-index: 2;
+    background-color: rgb(244 207 223);
+    border-color: rgb(255, 255, 255);
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding-left: 3px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+ .fa-brands.fa-facebook{
+    font-size: 18px;
+    color:black;
+  }
+  .fa-brands.fa-twitter{
+     font-size: 18px;
+    color:black;
+  }
+  .fa-brands.fa-instagram{
+   font-size: 18px;
+    color:black;
+  }
+
+.icons i:hover {
+    background: white;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+.team {
+    margin-top: -10px;
+    z-index: 1;
+    height: 600px;
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    background: url('https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/title-area-team.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* SECTION 2 */
+.container1 {
+    display: flex;
+    align-items: center;
+    padding: 80px;
+    gap: 50px;
+    background-color: #efdeef;
+}
+
+.team1 img {
+    width: 500px;
+    margin-left: 100px;
+}
+
+.content1 {
+    max-width: 400px;
+    margin-right: 100px;
+}
+
+.title {
+    font-size: 60px;
+    font-style: italic;
+    margin-bottom: 20px;
+
+}
+
+.text {
+    color: #565656;
+    line-height: 28px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
+
+/* SECTION 3 */
+.container2 {
+    display: flex;
+    align-items: center;
+    padding: 80px;
+    gap: 50px;
+    background-color: white;
+}
+
+.team2 img {
+    width: 500px;
+    margin-right: 100px;
+}
+
+.content2 {
+    max-width: 400px;
+margin-left: 100px;}
+
+.title {
+    font-size: 60px;
+    font-style: italic;
+    margin-bottom: 20px;
+
+}
+
+.text {
+    color: #565656;
+    line-height: 28px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
+
+.footer {
+    height: 200px;
+    text-align: center;
+    vertical-align: baseline;
+    outline: 0;
+    background: url('assets/footer-img.jpg');
+    color: #ffffff;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    padding: 72px 0 52px;
+}
