@@ -19,23 +19,24 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(7, 87, 145);
     letter-spacing: 2px;
+    background: rgb(7, 87, 145);
     padding: 20px 60px;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 .nav-logo {
     display: flex;
     align-items: center;
-    margin-left: 100px; 
+    margin-left: 100px;
 }
 
 .nav-logo img {
-    width: 50px;      
-    height: auto;      
+    width: 50px;
+    height: auto;
     object-fit: contain;
 }
 
@@ -43,6 +44,7 @@ a {
     display: flex;
     gap: 40px;
     align-items: center;
+
 }
 
 .navbar a {
@@ -72,22 +74,22 @@ a {
     align-items: center;
     gap: 30px;
     font-size: 20px;
-
 }
+
 
 /* section 2 */
 .logo {
     width: 100%;
-    height: 80vh;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('https://t3.ftcdn.net/jpg/07/80/95/16/360_F_780951672_cJzVeOxybkHkCkFDIOGUAlcq2ADIHVO7.jpg');
+    text-align: center;
+    background: url('https://bridge277.qodeinteractive.com/wp-content/uploads/2019/10/p2-title-img-01.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
-
 .logo h1 {
     color: white;
     font-size: 70px;
@@ -96,44 +98,72 @@ a {
 }
 
 /* section 3 */
-.section3 {
-    background-color: rgb(215, 250, 246);
-}
+ .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px;
+    gap: 40px;
+  }
 
-.stories {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 25px;
-}
+  .left {
+    flex: 1;
+  }
 
-.cards {
-    display: grid;
+  h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+
+  .container p {
+    color: black;
+    max-width: 500px;
+    line-height: 1.5;
+  }
+
+  .form {
     margin-top: 30px;
-    grid-template-columns: repeat(3, 1fr);
-    background: white;
-    padding: 20px;
-}
+    max-width: 500px;
+  }
 
-.card1,
-.card2,
-.card3,
-.card4,
-.card5,
-.card6 {
-    background: whitesmoke;
-    padding: 50px;
-    margin-left: 40px;
-    border-radius: 15px;
-    text-align: left;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
+  .row {
+    display: flex;
+    gap: 10px;
+  }
 
-.image1 {
-    width: 50%;
-    margin-left: 40px;
-    align-items: center;
-    object-position: center;
-}
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 14px;
+  }
+
+  textarea {
+    height: 150px;
+    resize: none;
+  }
+
+  button {
+    padding: 12px 25px;
+    border: 1px solid #000;
+    background: #ffe9d6;
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .right img {
+    max-width: 100%;
+    height: auto;
+  } 
+  /* map */
 
 /* section 4 */
 .section4 {
@@ -143,8 +173,7 @@ a {
     justify-content: center;
     width: 100%;
     min-height: 60vh;
-    /* better than fixed height */
-    background: rgb(173, 213, 226);
+    background: #ADD5E2;
     padding: 60px 20px;
     text-align: center;
 }
@@ -161,7 +190,6 @@ a {
     margin-bottom: 25px;
     color: #333;
 }
-
 
 .subscribe-box {
     display: flex;
@@ -194,7 +222,6 @@ a {
     background: #06263d;
     transform: translateY(-2px);
 }
-
 /* section 5 */
 .footer {
     background: #0a3d62;
@@ -206,5 +233,6 @@ a {
 
 .footer-links a {
     color: white;
+    gap: 20px;
     display: block;
 }
