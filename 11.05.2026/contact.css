@@ -90,6 +90,7 @@ a {
     background-size: cover;
     background-position: center;
 }
+
 .logo h1 {
     color: white;
     font-size: 70px;
@@ -98,72 +99,72 @@ a {
 }
 
 /* section 3 */
- .container {
+.container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 60px;
     gap: 40px;
-  }
+}
 
-  .left {
+.left {
     flex: 1;
-  }
+}
 
-  h1 {
+h1 {
     font-size: 42px;
     margin-bottom: 10px;
-  }
+}
 
-  .container p {
+.container p {
     color: black;
     max-width: 500px;
     line-height: 1.5;
-  }
+}
 
-  .form {
+.form {
     margin-top: 30px;
     max-width: 500px;
-  }
+}
 
-  .row {
+.row {
     display: flex;
     gap: 10px;
-  }
+}
 
-  input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     background: #fff;
     font-size: 14px;
-  }
+}
 
-  textarea {
+textarea {
     height: 150px;
     resize: none;
-  }
+}
 
-  button {
+button {
     padding: 12px 25px;
     border: 1px solid #000;
     background: #ffe9d6;
     cursor: pointer;
     letter-spacing: 2px;
-  }
+}
 
-  .right {
+.right {
     flex: 1;
     display: flex;
     justify-content: center;
-  }
+}
 
-  .right img {
+.right img {
     max-width: 100%;
     height: auto;
-  } 
-  /* map */
+}
 
 /* section 4 */
 .section4 {
@@ -192,7 +193,6 @@ a {
 }
 
 .subscribe-box {
-    display: flex;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
@@ -208,7 +208,7 @@ a {
 }
 
 .subscribe-btn {
-    padding: 12px 24px;
+    padding: 14px 24px;
     border-radius: 30px;
     border: none;
     background: #0a3d62;
@@ -222,6 +222,7 @@ a {
     background: #06263d;
     transform: translateY(-2px);
 }
+
 /* section 5 */
 .footer {
     background: #0a3d62;

@@ -127,6 +127,14 @@ a {
     text-align: left;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover,
+.card5:hover,
+.card6:hover {
+    transform: translateY(-8px);
+}
 
 .image1 {
     width: 50%;
