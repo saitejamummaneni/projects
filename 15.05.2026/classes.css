@@ -79,13 +79,14 @@ a {
 .container {
     height: 70vh;
     width: 100%;
-    background-image: url('https://bridge314.qodeinteractive.com/wp-content/uploads/2020/01/p1-title-img-02.jpg');
+    background-image: url('https://bridge314.qodeinteractive.com/wp-content/uploads/2020/01/h1-rev-img-01.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
     animation: fadeUp 7s ease infinite;
 }
 
@@ -111,194 +112,8 @@ a {
     text-align: center;
     justify-content: center;
     align-items: center;
-    text-transform: uppercase;
 }
-
 /* section 2 */
-.content {
-    display: flex;
-    margin-top: 50px;
-    height: 70vh;
-    padding: 40px;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.content:hover {
-    transform: translateY(-15px);
-}
-
-.left {
-    width: 560px;
-    height: 315px;
-    gap: 30px;
-}
-
-.right {
-    margin-left: 50px;
-}
-
-.right h5 {
-    color: #8b8b95;
-    font-size: 24px;
-}
-
-.right h1 {
-    font-size: 65px;
-    margin-bottom: 20px;
-}
-
-.right p {
-    font-size: 15px;
-    margin-bottom: 20px;
-    line-height: 1.8;
-    letter-spacing: 2;
-}
-
-.btn {
-    padding: 12px 20px;
-    border: 1px solid black;
-    background: rgb(73, 73, 183);
-}
-
-.btn:hover {
-    background: cornflowerblue;
-}
-
-/* section 3 */
-.section3 {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 30px;
-    background: #6bbfa8;
-    animation: dropDown 8s ease-in infinite;
-}
-
-@keyframes dropDown {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-.section3 h5 {
-    font-style: italic;
-    font-size: 25px;
-    color: #8b8b95;
-    line-height: 35px;
-    margin-bottom: 30px;
-}
-
-.section3 h3 {
-    font-size: 75px;
-    color: black;
-    line-height: 35px;
-    margin-bottom: 50px;
-}
-
-.section3 p {
-    font-style: cursive;
-    font-size: 20px;
-}
-
-.stats {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    flex-wrap: wrap;
-    margin-top: 70px;
-}
-
-.stat {
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.stat h2 {
-    font-size: 70px;
-    margin-bottom: 10px;
-}
-
-.stat p {
-    font-size: 28px;
-    font-family: cursive;
-}
-
-.color1 {
-    background: #8bbbb4;
-    transition: 0.3s;
-}
-
-.color2 {
-    background: #df8f73;
-}
-
-.color3 {
-    background: #f2ba61;
-}
-
-.color4 {
-    background: #266674;
-}
-
-.color1:hover,
-.color2:hover,
-.color3:hover,
-.color4:hover {
-    background: #8b8b95;
-}
-
-/* section 4 */
-.section4 {
-    height: 70vh;
-    width: 100%;
-    margin-top: 40px;
-    color: #fff;
-    background-image: url('https://bridge314.qodeinteractive.com/wp-content/uploads/2020/01/h1-test-01.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.dots {
-    font-size: 70px;
-}
-
-.section4 p {
-    line-height: 1.5;
-    font-family: cursive;
-    font-size: 32px;
-    margin-bottom: 25px;
-}
-
-.section4 h3 {
-    font-weight: bold;
-    font-size: 24px;
-
-}
-
-/* section 5 */
 .courses {
     background: white;
     align-items: center;
@@ -341,8 +156,159 @@ a {
 .card:hover {
     transform: translateY(-10px);
 }
+/* section 3 */
+.cards {
+    margin: 50px;
+}
+.cards p {
+    font-size: 25px;
+    font-family: cursive;
+    color: #a7c6bc;
+    line-height: 35px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
 
-/* section 6 */
+.cards h1 {
+    font-size: 75px;
+    color: black;
+    line-height: 35px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.images {
+    display: flex;
+    gap: 34px;
+    justify-content: center;
+}
+
+.card {
+    width: 32%;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 590px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #2f2f39;
+    margin-top: 32px;
+    margin-bottom: 18px;
+}
+
+.card p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #8b8b95;
+    width: 92%;
+    margin: auto;
+    font-weight: 400;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 34px;
+    text-decoration: none;
+    color: #1f2230;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.card a:hover {
+    color: #6bbfa8;
+}
+/* section 4 */
+.section4 h1 {
+    font-size: 75px;
+    margin-top: 30px;
+}
+
+form {
+    margin-top: 50px;
+    background: #0056b3;
+    padding: 40px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 15px;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #007bff;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.02);
+}
+/* footer section */
+
 .footer {
     width: 90%;
     margin: 60px auto;
