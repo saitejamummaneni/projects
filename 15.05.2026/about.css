@@ -43,29 +43,18 @@ a {
     display: flex;
     gap: 40px;
     align-items: center;
-
 }
 
 .navbar a {
     color: black;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: bold;
     position: relative;
+    transition: 0.7s ease;
 }
 
-.navbar a::before {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    left: 0;
-    bottom: -5px;
-    background: black;
-    transition: 0.3s;
-}
-
-.navbar a:hover::before {
-    width: 100%;
+.navbar a:hover {
+    color: #79bea8;
 }
 
 .icons {
@@ -73,6 +62,14 @@ a {
     align-items: center;
     gap: 30px;
     font-size: 20px;
+}
+
+.icons i {
+    transform: 0.3s;
+}
+
+.icons i:hover {
+    color: #79bea8;
 }
 
 /* section 1 */
@@ -134,6 +131,19 @@ a {
     width: 560px;
     height: 315px;
     gap: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0px)
+    }
+     50% {
+        transform: translateY(-10px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
 }
 
 .right {
@@ -262,7 +272,7 @@ a {
 .color2:hover,
 .color3:hover,
 .color4:hover {
-    background: #8b8b95;
+    background: #14145d;
 }
 
 /* section 4 */
@@ -305,17 +315,20 @@ a {
     text-align: center;
     justify-content: center;
 }
+
 .courses h2 {
     font-size: 55px;
     font-weight: bold;
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
 .courses h3 {
     font-size: 35px;
     font-weight: bold;
     margin-bottom: 10px;
 }
+
 .courses p {
     font-size: 25px;
     margin-bottom: 30px;
@@ -340,13 +353,14 @@ a {
 
 .card:hover {
     transform: translateY(-10px);
+    background: #266674;
 }
 
 /* section 6 */
 .footer {
     width: 90%;
     margin: 60px auto;
-    background: #f8f6f8;
+    background: #a6cad7;
     padding: 60px 50px;
     margin-bottom: 20px;
 }

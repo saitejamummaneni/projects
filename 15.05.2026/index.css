@@ -43,29 +43,18 @@ a {
     display: flex;
     gap: 40px;
     align-items: center;
-
 }
 
 .navbar a {
     color: black;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: bold;
     position: relative;
+    transition: 0.7s ease;
 }
 
-.navbar a::before {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    left: 0;
-    bottom: -5px;
-    background: black;
-    transition: 0.3s;
-}
-
-.navbar a:hover::before {
-    width: 100%;
+.navbar a:hover {
+    color: #79bea8;
 }
 
 .icons {
@@ -75,31 +64,38 @@ a {
     font-size: 20px;
 }
 
+.icons i {
+    transform: 0.3s;
+}
+
+.icons i:hover {
+    color: #79bea8;
+}
+
 /* section 1 */
 .container {
     height: 70vh;
     width: 100%;
-    background-image: url('https://bridge314.qodeinteractive.com/wp-content/uploads/2020/01/h1-rev-img-03.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: float 3s ease-in-out infinite;
+    animation: changeBg 12s infinite;
 }
 
-@keyframes float {
+@keyframes changeBg {
     0% {
-        transform: translateY(0px);
+        background-image: url('https://bridge314.qodeinteractive.com/wp-content/uploads/2020/01/h1-rev-img-03.jpg');
     }
 
-    50% {
-        transform: translateY(-15px);
+    33% {
+        background-image: url('https://bridge314.qodeinteractive.com/wp-content/uploads/2020/01/h1-rev-img-01.jpg');
     }
 
     100% {
-        transform: translateY(0px);
+        background-image: url('https://bridge314.qodeinteractive.com/wp-content/uploads/2020/01/h1-rev-img-04.jpg');
     }
 }
 
@@ -112,15 +108,16 @@ a {
     justify-content: center;
     opacity: 0;
     transform: translateY(40px);
-    animation: fadeUp 1s ease forwards;
+    animation: fadeUp 4s ease infinite;
 }
 
 @keyframes fadeUp {
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0px);
     }
 }
+
 
 /* section 2 */
 .section2 {
@@ -155,6 +152,7 @@ a {
 /* section 3 */
 .cards {
     margin: 50px;
+    transition: 0.3s ease;
 }
 
 .images {
@@ -166,11 +164,11 @@ a {
 .card {
     width: 32%;
     text-align: center;
-    transition: 0.5s;
+    transition: 0.5s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.1);
 }
 
 .card img {
@@ -215,7 +213,7 @@ a {
 /* section 4 */
 .section4 {
     margin-top: 100px;
-    margin: 20px;
+    /* margin: 40px auto; */
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -224,7 +222,7 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    animation: zoomInOut 12s ease-in-out infinite;
+    animation: zoomInOut 3s ease-in-out infinite;
 }
 
 @keyframes zoomInOut {
@@ -267,14 +265,9 @@ a {
 /* section 5 */
 .video {
     margin: 50px;
-    transition: transform 0.1s ease;
 }
 
-.video:hover {
-    transform: scale(1.1);
-}
-
-/* section 6 */
+/* section 6*/
 .section6 {
     justify-content: center;
     align-items: center;
@@ -319,7 +312,6 @@ a {
     align-items: center;
     color: #ffffff;
 }
-
 .stat h2 {
     font-size: 70px;
     margin-bottom: 10px;
@@ -351,10 +343,62 @@ a {
 .color2:hover,
 .color3:hover,
 .color4:hover {
-    background: #8b8b95;
+    background: #e05d21;
 }
 
 /* section 7 */
+.batches h2 {
+    text-align: center;
+    justify-content: center;
+    font-size: 75px;
+    margin-top: 40px;
+}
+
+.slots {
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    gap: 35px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+        animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.timing {
+    background: #266674;
+    width: 400px;
+    padding: 35px;
+    color: #fff;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.5s ease;
+}
+.timing:hover {
+    transform: scale(1.1);
+    background: #007bff;
+}
+
+.timing h3 {
+    color: #e85a19;
+    margin-bottom: 15px;
+}
+
+/* section 8 */
 .section7 h1 {
     font-size: 75px;
     margin-top: 30px;
@@ -432,7 +476,7 @@ button:hover {
 .footer {
     width: 90%;
     margin: 60px auto;
-    background: #f8f6f8;
+    background: #a6cad7;
     padding: 60px 50px;
     margin-bottom: 20px;
 }
