@@ -9,20 +9,26 @@ body {
     background: #fff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
     color: black;
 }
 
 /* navbar */
+
 .main {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
     letter-spacing: 2px;
     padding: 20px 60px;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -65,7 +71,7 @@ a {
 }
 
 .icons i {
-    transform: 0.3s;
+    transition: 0.3s;
 }
 
 .icons i:hover {
@@ -107,17 +113,20 @@ a {
     text-align: center;
     justify-content: center;
     opacity: 0;
-    transform: translateY(40px);
-    animation: fadeUp 4s ease infinite;
+    animation: fadeUp 1.5s ease forwards;
 }
 
 @keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
     to {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 }
-
 
 /* section 2 */
 .section2 {
@@ -173,7 +182,7 @@ a {
 
 .card img {
     width: 100%;
-    height: 590px;
+    height: auto;
     object-fit: cover;
     display: block;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -213,7 +222,6 @@ a {
 /* section 4 */
 .section4 {
     margin-top: 100px;
-    /* margin: 40px auto; */
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -222,21 +230,6 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    animation: zoomInOut 3s ease-in-out infinite;
-}
-
-@keyframes zoomInOut {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
 }
 
 .section4 h5 {
@@ -263,8 +256,10 @@ a {
 }
 
 /* section 5 */
-.video {
-    margin: 50px;
+iframe {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 30px;
 }
 
 /* section 6*/
@@ -312,6 +307,7 @@ a {
     align-items: center;
     color: #ffffff;
 }
+
 .stat h2 {
     font-size: 70px;
     margin-bottom: 10px;
@@ -362,8 +358,9 @@ a {
     align-items: center;
     text-align: center;
     justify-content: center;
-        animation: float 3s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
 }
+
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -388,6 +385,7 @@ a {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     transition: 0.5s ease;
 }
+
 .timing:hover {
     transform: scale(1.1);
     background: #007bff;
@@ -471,10 +469,44 @@ button:hover {
     transform: scale(1.02);
 }
 
+/* section 9 */
+.free-trail {
+    text-align: center;
+    background: #4ca6ac;
+    margin: 60px;
+    padding: 60px 40px;
+    border-radius: 30px;
+}
+
+.free-trail h2 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.free-trail p {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.button {
+    width: 15%;
+    border: 1px solid;
+    padding: 10px 25px;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);  
+    transform: translateY(-5px);
+    opacity: 0.95;
+}
 /* footer section */
 
 .footer {
-    width: 90%;
+    width: 100%;
     margin: 60px auto;
     background: #a6cad7;
     padding: 60px 50px;
@@ -527,20 +559,17 @@ button:hover {
 }
 
 /* responsive */
-/* mobile view */
+
+/* mobile view  */
+
 @media screen and (max-width: 767px) {
 
-    body {
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    /* navbar */
+    /* Navbar */
     .main {
         flex-direction: column;
         padding: 20px;
         gap: 20px;
+        text-align: center;
     }
 
     .navbar {
@@ -552,35 +581,37 @@ button:hover {
         gap: 15px;
     }
 
-    /* hero section */
+    /* Section 1 */
     .container {
-        height: 50vh;
+        height: 60vh;
         padding: 20px;
-        text-align: center;
     }
 
     .container h1 {
-        font-size: 40px;
-        line-height: 50px;
+        font-size: 42px;
+        line-height: 1.3;
     }
 
-    /* section headings */
+    /* Headings */
     .section2 h1,
     .section4 h1,
-    .section6 h3 {
-        font-size: 40px;
-        line-height: 50px;
+    .section6 h3,
+    .batches h2,
+    .section7 h1 {
+        font-size: 38px;
+        line-height: 1.3;
     }
 
     .section2 h5,
     .section4 h5,
     .section6 h5 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    /* cards */
+    /* Cards */
     .images {
         flex-direction: column;
+        align-items: center;
     }
 
     .card {
@@ -588,58 +619,75 @@ button:hover {
     }
 
     .card img {
-        height: auto;
+        aspect-ratio: 3/4;
     }
 
-    /* courses */
+    /* Courses */
     .main-courses {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 25px;
     }
 
-    /* video */
-    .video {
-        margin: 20px;
-    }
-
+    /* Video */
     iframe {
         width: 100%;
-        height: auto;
+        height: 250px;
     }
 
-    /* stats */
+    /* Stats */
     .stats {
-        gap: 30px;
+        gap: 25px;
     }
 
     .stat {
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
     }
 
     .stat h2 {
-        font-size: 45px;
+        font-size: 38px;
     }
 
     .stat p {
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    /* footer */
-    .footer {
+    /* Timings */
+    .slots {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timing {
         width: 100%;
-        padding: 40px 20px;
+        max-width: 320px;
     }
 
+    /* Form */
+    form {
+        width: 100%;
+        padding: 25px;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        font-size: 14px;
+    }
+
+    /* Footer */
     .footer-container {
         flex-direction: column;
+        text-align: center;
     }
 }
 
-/* tablet view */
+/* TABLET VIEW */
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
+    /* Navbar */
     .main {
         padding: 20px 30px;
     }
@@ -648,41 +696,70 @@ button:hover {
         gap: 20px;
     }
 
+    .navbar a {
+        font-size: 14px;
+    }
+
+    /* section 1 */
     .container h1 {
         font-size: 55px;
     }
 
+    /* Headings */
     .section2 h1,
     .section4 h1,
-    .section6 h3 {
-        font-size: 55px;
+    .section6 h3,
+    .batches h2,
+    .section7 h1 {
+        font-size: 50px;
     }
 
-    /* cards */
+    /* Cards */
     .images {
         flex-wrap: wrap;
-        gap: 20px;
+        justify-content: center;
     }
 
     .card {
         width: 48%;
     }
 
-    .card img {
-        height: 450px;
-    }
-
-    /* courses */
+    /* Courses */
     .main-courses {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* stats */
-    .stats {
-        gap: 40px;
+    /* Video */
+    iframe {
+        width: 100%;
+        height: 450px;
     }
 
-    /* footer */
+    /* Stats */
+    .stats {
+        gap: 30px;
+    }
+
+    .stat {
+        width: 190px;
+        height: 190px;
+    }
+
+    /* Timing */
+    .slots {
+        flex-wrap: wrap;
+    }
+
+    .timing {
+        width: 45%;
+    }
+
+    /* Form */
+    form {
+        max-width: 600px;
+    }
+
+    /* Footer */
     .footer-container {
         gap: 30px;
     }
@@ -692,15 +769,51 @@ button:hover {
 
 @media screen and (min-width: 1024px) {
 
+    /* Navbar */
     .main {
         flex-direction: row;
     }
 
+    .navbar {
+        flex-direction: row;
+    }
+
+    /* section 1 */
+    .container h1 {
+        font-size: 75px;
+    }
+
+    /* Cards */
     .images {
         flex-direction: row;
     }
 
+    .card {
+        width: 32%;
+    }
+
+    /* Courses */
     .main-courses {
         grid-template-columns: repeat(5, 1fr);
+    }
+
+    /* Video */
+    iframe {
+        height: 600px;
+    }
+
+    /* Stats */
+    .stats {
+        flex-direction: row;
+    }
+
+    /* Timings */
+    .slots {
+        flex-direction: row;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: row;
     }
 }

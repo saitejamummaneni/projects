@@ -9,6 +9,10 @@ body {
     background: #fff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -17,12 +21,13 @@ a {
 /* navbar */
 .main {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
     letter-spacing: 2px;
     padding: 20px 60px;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -65,7 +70,7 @@ a {
 }
 
 .icons i {
-    transform: 0.3s;
+    transition: 0.3s;
 }
 
 .icons i:hover {
@@ -83,20 +88,20 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeUp 7s ease infinite;
+    animation: zoomBg 7s ease infinite;
 }
 
-@keyframes fadeUp {
+@keyframes zoomBg {
     0% {
-        transform: translateY(-10px);
+        transform: scale(1);
     }
 
     50% {
-        transform: translateY(20px);
+        transform: scale(1.03);
     }
 
     100% {
-        transform: translateY(-10px);
+        transform: scale(1);
     }
 }
 
@@ -112,69 +117,93 @@ a {
 }
 
 /* section 2 */
+.section2 {
+    width: 100%;
+    padding: 60px 20px;
+    background: #ebebf4;
+}
+
 .content {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
-    margin-top: 50px;
-    height: 70vh;
-    padding: 40px;
     align-items: center;
     justify-content: space-between;
-    text-align: center;
-    transition: 0.3s;
+    gap: 50px;
+    flex-wrap: wrap;
+    transition: 0.3s ease;
 }
 
 .content:hover {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
 }
 
 .left {
-    width: 560px;
-    height: 315px;
-    gap: 30px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    min-width: 300px;
     animation: float 3s ease-in-out infinite;
 }
+
+.left iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
 @keyframes float {
     0% {
-        transform: translateY(0px)
+        transform: translateY(0px);
     }
-     50% {
-        transform: translateY(-10px)
+
+    50% {
+        transform: translateY(-10px);
     }
+
     100% {
-        transform: translateY(0px)
+        transform: translateY(0px);
     }
 }
 
 .right {
-    margin-left: 50px;
+    flex: 1;
+    min-width: 300px;
 }
 
 .right h5 {
     color: #8b8b95;
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 .right h1 {
-    font-size: 65px;
+    font-size: 60px;
     margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .right p {
-    font-size: 15px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 25px;
     line-height: 1.8;
-    letter-spacing: 2;
+    letter-spacing: 1px;
+    color: #444;
 }
 
 .btn {
-    padding: 12px 20px;
-    border: 1px solid black;
-    background: rgb(73, 73, 183);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
 }
 
 .btn:hover {
-    background: cornflowerblue;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    transform: scale(1.05);
 }
 
 /* section 3 */
@@ -217,7 +246,7 @@ a {
 }
 
 .section3 p {
-    font-style: cursive;
+    font-family: cursive;
     font-size: 20px;
 }
 
@@ -358,7 +387,7 @@ a {
 
 /* section 6 */
 .footer {
-    width: 90%;
+    width: 100%;
     margin: 60px auto;
     background: #a6cad7;
     padding: 60px 50px;
@@ -411,20 +440,17 @@ a {
 }
 
 /* responsive */
-/* mobile view */
+
+/* MOBILE VIEW */
+
 @media screen and (max-width: 767px) {
 
-    body {
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    /* navbar */
+    /* Navbar */
     .main {
         flex-direction: column;
         padding: 20px;
         gap: 20px;
+        text-align: center;
     }
 
     .navbar {
@@ -432,98 +458,143 @@ a {
         gap: 15px;
     }
 
-    .icons {
-        gap: 15px;
+    .navbar a {
+        font-size: 14px;
     }
 
-    /* hero section */
+    .icons {
+        gap: 15px;
+        font-size: 18px;
+    }
+
+    /* Section 1*/
     .container {
         height: 50vh;
         padding: 20px;
+    }
+
+    .container p {
+        font-size: 42px;
+        line-height: 1.3;
+    }
+
+    /* Section 2 */
+    .content {
+        flex-direction: column;
         text-align: center;
+        gap: 30px;
     }
 
-    .container h1 {
+    .left iframe {
+        height: 220px;
+    }
+
+    .right h5 {
+        font-size: 18px;
+    }
+
+    .right h1 {
+        font-size: 38px;
+    }
+
+    .right p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Section 3 */
+    .section3 h5 {
+        font-size: 18px;
+    }
+
+    .section3 h3 {
+        font-size: 42px;
+        line-height: 1.3;
+    }
+
+    .section3 p {
+        font-size: 16px;
+    }
+
+    .stats {
+        gap: 25px;
+    }
+
+    .stat {
+        width: 160px;
+        height: 160px;
+    }
+
+    .stat h2 {
+        font-size: 38px;
+    }
+
+    .stat p {
+        font-size: 18px;
+    }
+
+    /* Section 4 */
+    .section4 {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .dots {
         font-size: 40px;
-        line-height: 50px;
     }
 
-    /* section headings */
-    .section2 h1,
-    .section4 h1,
-    .section6 h3 {
-        font-size: 40px;
-        line-height: 50px;
-    }
-
-    .section2 h5,
-    .section4 h5,
-    .section6 h5 {
+    .section4 p {
         font-size: 20px;
     }
 
-    /* cards */
-    .images {
+    .section4 h3 {
+        font-size: 18px;
+    }
+
+    /* Courses */
+    .courses h2 {
+        font-size: 40px;
+    }
+
+    .courses h3 {
+        font-size: 24px;
+    }
+
+    .courses p {
+        font-size: 16px;
+    }
+
+    .course-container {
         flex-direction: column;
+        align-items: center;
     }
 
     .card {
         width: 100%;
+        max-width: 320px;
     }
 
-    .card img {
-        height: auto;
-    }
-
-    /* courses */
-    .main-courses {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    /* video */
-    .video {
-        margin: 20px;
-    }
-
-    iframe {
-        width: 100%;
-        height: auto;
-    }
-
-    /* stats */
-    .stats {
-        gap: 30px;
-    }
-
-    .stat {
-        width: 180px;
-        height: 180px;
-    }
-
-    .stat h2 {
-        font-size: 45px;
-    }
-
-    .stat p {
-        font-size: 20px;
-    }
-
-    /* footer */
+    /* Footer */
     .footer {
-        width: 100%;
         padding: 40px 20px;
     }
 
     .footer-container {
         flex-direction: column;
+        text-align: center;
     }
 }
 
-/* tablet view */
+/* TABLET VIEW */
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
+    /* Navbar */
     .main {
         padding: 20px 30px;
     }
@@ -532,59 +603,147 @@ a {
         gap: 20px;
     }
 
-    .container h1 {
-        font-size: 55px;
+    .navbar a {
+        font-size: 14px;
     }
 
-    .section2 h1,
-    .section4 h1,
-    .section6 h3 {
-        font-size: 55px;
-    }
-
-    /* cards */
-    .images {
-        flex-wrap: wrap;
+    .icons {
         gap: 20px;
     }
 
-    .card {
-        width: 48%;
+    /* section 1 */
+    .container {
+        height: 60vh;
     }
 
-    .card img {
-        height: 450px;
+    .container p {
+        font-size: 60px;
     }
 
-    /* courses */
-    .main-courses {
-        grid-template-columns: repeat(2, 1fr);
+    /* Section 2 */
+    .content {
+        flex-direction: column;
+        text-align: center;
     }
 
-    /* stats */
+    .left iframe {
+        height: 350px;
+    }
+
+    .right h1 {
+        font-size: 50px;
+    }
+
+    .right p {
+        font-size: 15px;
+    }
+
+    /* Section 3 */
+    .section3 h3 {
+        font-size: 55px;
+    }
+
     .stats {
-        gap: 40px;
+        gap: 35px;
     }
 
-    /* footer */
+    .stat {
+        width: 190px;
+        height: 190px;
+    }
+
+    .stat h2 {
+        font-size: 50px;
+    }
+
+    .stat p {
+        font-size: 22px;
+    }
+
+    /* Section 4 */
+    .section4 {
+        padding: 80px 30px;
+    }
+
+    .section4 p {
+        font-size: 26px;
+    }
+
+    /* Courses */
+    .course-container {
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 50px 30px;
+    }
+
     .footer-container {
         gap: 30px;
     }
 }
 
-/* desktop view */
+/* DESKTOP VIEW */
 
 @media screen and (min-width: 1024px) {
 
+    /* Navbar */
     .main {
         flex-direction: row;
     }
 
-    .images {
+    .navbar {
         flex-direction: row;
     }
 
-    .main-courses {
-        grid-template-columns: repeat(5, 1fr);
+    /* section 1 */
+    .container {
+        height: 70vh;
+    }
+
+    .container p {
+        font-size: 75px;
+    }
+
+    /* Section 2 */
+    .content {
+        flex-direction: row;
+    }
+
+    .left iframe {
+        height: 315px;
+    }
+
+    .right h1 {
+        font-size: 60px;
+    }
+
+    /* Section 3 */
+    .stats {
+        flex-direction: row;
+    }
+
+    .stat {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* Courses */
+    .course-container {
+        flex-direction: row;
+    }
+
+    .card {
+        width: 250px;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: row;
     }
 }
