@@ -131,11 +131,6 @@ a {
     justify-content: space-between;
     gap: 50px;
     flex-wrap: wrap;
-    transition: 0.3s ease;
-}
-
-.content:hover {
-    transform: translateY(-10px);
 }
 
 .left {
@@ -213,21 +208,6 @@ a {
     text-align: center;
     margin-top: 30px;
     background: #6bbfa8;
-    animation: dropDown 8s ease-in infinite;
-}
-
-@keyframes dropDown {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
 }
 
 .section3 h5 {
@@ -301,7 +281,7 @@ a {
 .color2:hover,
 .color3:hover,
 .color4:hover {
-    background: #14145d;
+    background: #4483d0;
 }
 
 /* section 4 */
@@ -318,6 +298,21 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
+    animation: dropDown 8s ease-in infinite;
+}
+
+@keyframes dropDown {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .dots {
@@ -372,7 +367,7 @@ a {
 }
 
 .card {
-    background: #111827;
+    background: #266674;
     color: white;
     padding: 30px;
     border-radius: 10px;
@@ -382,7 +377,7 @@ a {
 
 .card:hover {
     transform: translateY(-10px);
-    background: #266674;
+    background: #111827;
 }
 
 /* section 6 */
