@@ -59,7 +59,8 @@ a {
 }
 
 .navbar a:hover {
-    color: #79bea8;
+    color: #14a074;
+    transform: scale(1.1);
 }
 
 .icons {
@@ -74,7 +75,8 @@ a {
 }
 
 .icons i:hover {
-    color: #79bea8;
+    color: #14a074;
+    transform: translateY(-7px);
 }
 
 /* section 1 */
@@ -107,7 +109,19 @@ a {
     text-align: center;
     justify-content: center;
     align-items: center;
+    animation: rotateText 2s  linear alternate ;
 }
+
+@keyframes rotateText {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* section 2 */
 .courses {
@@ -137,7 +151,7 @@ a {
 
 .course-container {
     display: flex;
-    gap: 20px;
+    gap: 50px;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
@@ -153,7 +167,8 @@ a {
 }
 
 .card1:hover {
-    transform: translateY(-10px);
+    transform: translateX(-15px);
+    border: 5px solid salmon;
     background: #3b507f;
 }
 
@@ -196,7 +211,7 @@ a {
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
 }
 
 .card img {
@@ -235,7 +250,7 @@ a {
 }
 
 .card a:hover {
-    color: #6bbfa8;
+    color: #15c193;
 }
 
 /* section 4 */
@@ -263,6 +278,7 @@ a {
 
 .teacher-card:hover {
     transform: scale(1.1);
+    border: 5px solid orchid;
 }
 
 .teacher-card img {
@@ -554,7 +570,7 @@ button:hover {
 
 /* TABLET VIEW */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
 
     /* Navbar */
     .main {

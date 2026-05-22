@@ -60,7 +60,8 @@ a {
 }
 
 .navbar a:hover {
-    color: #79bea8;
+    color: #14a074;
+    transform: translateY(-7px);
 }
 
 .icons {
@@ -75,7 +76,8 @@ a {
 }
 
 .icons i:hover {
-    color: #79bea8;
+    color: #14a074;
+    transform: scale(1.1);
 }
 
 /* section 1 */
@@ -253,6 +255,7 @@ a {
     grid-template-columns: repeat(5, 1fr);
     gap: 50px;
     justify-items: center;
+    margin-top: 20px;
 }
 
 /* section 5 */
@@ -340,6 +343,7 @@ iframe {
 .color3:hover,
 .color4:hover {
     background: #e05d21;
+    border: 5px solid rgb(9, 32, 203);
 }
 
 /* section 7 */
@@ -472,27 +476,10 @@ button:hover {
 /* section 9 */
 .free-trail {
     text-align: center;
-    /* background: #4ca6ac; */
+    background: #4ca6ac;
     margin: 60px;
     padding: 60px 40px;
     border-radius: 30px;
-    background: linear-gradient(-45deg, #ff6b6b, #6c5ce7, #00cec9, #ffeaa7);
-    background-size: 400% 400%;
-    animation: gradientMove 10s ease infinite;
-}
-
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 .free-trail h2 {
@@ -569,11 +556,12 @@ button:hover {
 .footer-box a {
     text-decoration: none;
     color: #8b8b8b;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .footer-box a:hover {
     color: #000;
+
 }
 
 /* responsive */
@@ -581,7 +569,7 @@ button:hover {
 /* mobile view  */
 
 @media screen and (max-width: 767px) {
-
+    
     /* Navbar */
     .main {
         flex-direction: column;
@@ -703,7 +691,7 @@ button:hover {
 
 /* TABLET VIEW */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
 
     /* Navbar */
     .main {
@@ -796,7 +784,7 @@ button:hover {
         flex-direction: row;
     }
 
-    /* section 1  */
+    /* section 1 */
     .container h1 {
         font-size: 75px;
     }

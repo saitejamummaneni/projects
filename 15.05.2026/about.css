@@ -59,7 +59,8 @@ a {
 }
 
 .navbar a:hover {
-    color: #79bea8;
+    color: #14a074;
+    transform: scale(1.1);
 }
 
 .icons {
@@ -74,7 +75,8 @@ a {
 }
 
 .icons i:hover {
-    color: #79bea8;
+    color: #14a074;
+    transform: translateY(-7px);
 }
 
 /* section 1 */
@@ -114,6 +116,19 @@ a {
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    animation: fadeUp 1.5s ease forwards infinite;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* section 2 */
@@ -261,7 +276,7 @@ a {
 }
 
 .color1 {
-    background: #8bbbb4;
+    background: #ce3744;
     transition: 0.3s;
 }
 
@@ -281,7 +296,9 @@ a {
 .color2:hover,
 .color3:hover,
 .color4:hover {
-    background: #4483d0;
+    background: #3d7ece;
+    border: 3px solid rgb(4, 4, 4);
+    transform:  scale(1.1);
 }
 
 /* section 4 */
@@ -377,6 +394,7 @@ a {
 
 .card:hover {
     transform: translateY(-10px);
+    border: 3px solid rgba(227, 12, 163, 0.663);
     background: #111827;
 }
 
@@ -587,7 +605,7 @@ a {
 
 /* TABLET VIEW */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
 
     /* Navbar */
     .main {

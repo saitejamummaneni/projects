@@ -59,7 +59,8 @@ a {
 }
 
 .navbar a:hover {
-    color: #79bea8;
+    color: #14a074;
+    transform: scale(1.1);
 }
 
 .icons {
@@ -74,7 +75,8 @@ a {
 }
 
 .icons i:hover {
-    color: #79bea8;
+    color: #14a074;
+    transform: translateY(-7px);
 }
 
 /* section 1 */
@@ -109,7 +111,19 @@ a {
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    animation: moveText 2s ease-in-out ;
 }
+
+@keyframes moveText {
+    from {
+        transform: translateX(-100px);
+    }
+
+    to {
+        transform: translateX(100px);
+    }
+}
+
 
 /* section 2 */
 .courses {
@@ -156,7 +170,22 @@ a {
 
 .card:hover {
     background: #2c416e;
+    border: 5px solid orangered;
     transform: skew(-5deg) scale(1.1);
+}
+.card2 {
+    background: #111827;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    transition: 0.3s ease-in-out;
+}
+
+.card2:hover {
+    background: #2c416e;
+    border: 5px solid orangered;
+    transform: scale(1.1);
 }
 
 /* section 3 */
@@ -185,7 +214,8 @@ a {
 .left img:hover {
     transition: 0.4s;
     opacity: 0.8;
-    transform:scale(1.1);
+    transform: scale(1.1);
+    border: 3px solid cornflowerblue;
 }
 
 img:hover {
@@ -322,6 +352,8 @@ img:hover {
 
 .images img:hover {
     transform: rotate(-8deg);
+    border: 5px solid rgb(38, 8, 120);
+    box-shadow: 0 0 20x rgba(0, 0, 0, 0.08);
 }
 
 /* footer section */
@@ -504,7 +536,7 @@ img:hover {
 
 /* TABLET VIEW */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
 
     /* Navbar */
     .main {
